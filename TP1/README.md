@@ -1,6 +1,25 @@
-## TP1 - Création des interfaces de machines à café et distributeurs
+# TP1 - Création des interfaces de machines à café et distributeurs
 
-### 1. Création d'un distributeur
+## 0. Initialisation du projet et du dépôt GIT
+
+- Créer un dépôt GIT sur la [forge](https://forge.univ-lyon1.fr) **sans README** ni autre fichiers
+- Copiez la commande `git remote add origin …`
+- Ajoutez-moi en tant que **developer**
+- Créée un nouveau projet Java sur IntelliJ ou NetBeans
+- Ouvrez un terminal dans le dossier (avec votre IDE)
+- Tapez les commandes suivantes
+
+```shell
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+[ LA LIGNE git remote add origin… QUE VOUS AVEZ COPIÉ ]
+git push -u origin main
+git branch -b TP1
+```
+
+## 1. Création d'un distributeur
 
 Nous allons créer un distributeur (de gâteau, boisson, café…) qui sera implémenté par la classe `Distributeur`.
 
@@ -8,10 +27,9 @@ Un distributeur possède :
 
 1. un nom `name` de type `String`
 2. une position `position` de type `Position`
-3. une liste de produits `products` de type `List<Product>` qui sera implémentée par une `ArrayList`
-4. un stock `stock` de type `Map<Product, Integer>` qui permet de connaître le stock de chaque produit, pour l'implémentation vous utiliserez une `HashMap`
+3. un stock `stock` de type `Map<Product, Integer>` qui permet de connaître le stock de chaque produit, pour l'implémentation vous utiliserez une `HashMap`
 
-Les 3 premiers attributs seront passés en paramètre au constructeur du distributeur, vous mettrez un stock par défaut à 10 pour chaque produit.
+Les 2 premiers attributs seront passés en paramètre au constructeur du distributeur, ainsi qu'une liste de produits `products` de type `List<Product>` qui permettra de remplir la variable `stock`. Vous mettrez un stock par défaut à 10 pour chaque produit.
 
 Un distributeur doit permettre de :
 
