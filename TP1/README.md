@@ -19,6 +19,8 @@ git push -u origin main
 git branch -b TP1
 ```
 
+Pensez à commit/push à la fin d'une partie du sujet ou de la séance.
+
 ## 1. Création d'un distributeur
 
 Nous allons créer un distributeur (de gâteau, boisson, café…) qui sera implémenté par la classe `Distributeur`.
@@ -58,7 +60,7 @@ Les produits seront représentés par un autre Enum avec les valeurs suivantes (
 - M_NMS
 - JUS_D_ORANGE
 
-### 2. Votre première fenêtre
+## 2. Votre première fenêtre
 
 Pour créer l'interface de la machine, vous allez allez créer une classe `InterfaceDistributeur` qui étend de `JFrame`.
 
@@ -84,7 +86,7 @@ Le constructeur de cette classe doit :
 - gérer la fermeture de la fenêtre (clique sur la croix)
 - afficher la fenêtre
 
-### 3. Contenu du main
+## 3. Contenu du main
 
 Le but du main est d'afficher l'interface de visualisation d'un distributeur.
 
@@ -92,22 +94,22 @@ Le but du main est d'afficher l'interface de visualisation d'un distributeur.
 - dans cette fonction, instanciez un distributeur avec quelques articles
 - instanciez également une fenêtre `InterfaceDistributeur` qui prendra en paramètre votre distributeur
 
-### 4. Plusieurs types de machines
+## 4. Plusieurs types de machines
 
 Nous allons maintenant faire évoluer notre modélisation de distributeur afin de permettre différents types de machines.
 
-#### 4.1 Généralisation du concept de "machine"
+### 4.1 Généralisation du concept de "machine"
 
 Renommez votre classe `Distributeur` en `Machine` (on parle de **refactoring**, utilisez votre IDE pour le faire), ensuite faites-en une classe abstraite.
 
-#### 4.2 Création du nouveau distributeur
+### 4.2 Création du nouveau distributeur
 
 - Créez une nouvelle classe `Distributeur` qui étend de `Machine` (pensez bien à appeler le constructeur du parent via `super`).
 - Dans dans la fonction `main`, remplacez l'appel au constructeur de `Machine` par le constructeur de `Distributeur`.
 
 Normalement votre code doit de nouveau compiler.
 
-#### 4.3 Ajout du type de machine sur les produits
+### 4.3 Ajout du type de machine sur les produits
 
 - Créez un nouvel Enum `TypeMachine` qui contient les valeurs `DISTRIBUTEUR` et `MACHINE_A_CAFE`.
 - Dans `Produit` :
@@ -121,7 +123,7 @@ Normalement votre code doit de nouveau compiler.
 
 Votre application doit de nouveau compiler et vous devriez voir les captions au lieu des noms des enums de produits.
 
-#### 4.4 Création d'une machine à café
+### 4.4 Création d'une machine à café
 
 Créez une nouvelle classe `MachineACafe` qui étend également de `Machine`.
 
@@ -137,7 +139,7 @@ Pour modéliser cette contrainte :
 
 Dans `Product` ajoutez des articles avec le type `MACHINE_A_CAFE`
 
-#### 4.5 Création de l'interface de machine à café
+### 4.5 Création de l'interface de machine à café
 
 Pour tester votre machine à café, ajoutez une classe `InterfaceMachineACafe` qui étend de `InterfaceMachine` et prend en paramètre de constructeur une instance de `MachineACafe`.
 
