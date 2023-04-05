@@ -16,7 +16,7 @@ git commit -m "first commit"
 git branch -M main
 [ LA LIGNE git remote add origin… QUE VOUS AVEZ COPIÉ ]
 git push -u origin main
-git branch -b TP1
+git checkout -b TP1
 ```
 
 Pensez à commit/push à la fin d'une partie du sujet ou de la séance.
