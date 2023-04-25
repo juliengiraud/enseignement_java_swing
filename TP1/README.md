@@ -35,9 +35,7 @@ Les 2 premiers attributs seront passés en paramètre au constructeur du distrib
 
 Un distributeur doit permettre de :
 
-- connaître la liste des produits disponibles via la fonction `getProducts` :
-  - dans un premier temps vous pouvez retourner un `String` qui concatène toutes les les clés de la Map `stock` séparées par une virgule
-  - pour obtenir le nom d'un produit à partir de l'enum il existe la fonction `name`, utilisez-là dans un premier temps
+- connaître la liste des produits disponibles via la fonction **`getProducts`** qui retourne l'ensemble des clés de l'attribut `stock` via la fonction `getKeys`
 - connaître le stock de chaque produit via la fonction `getStock` qui prend en paramètre un produit et retourne son stock
 - effectuer un achat via la fonction `order` qui prend en paramètre un produit et
   - s'il est disponible, retire 1 à son stock puis retourne `true`
@@ -85,6 +83,8 @@ Le constructeur de cette classe doit :
   - ajouter les conteneurs à la fenêtre
 - gérer la fermeture de la fenêtre (clique sur la croix)
 - afficher la fenêtre
+
+> Afin de remplir la liste de JLabel, vous devez itérer sur les produits de votre distributeur via votre `getProducts` qui retourne un ensemble de produits (`Set<Product>`). Afin de récupérer le nom de chaque produit vous pouvez utiliser la fonction `name`. Enfin, pour obtenir le stock de chaque produit vous devez utiliser la fonction `getStock` de votre distributeur.
 
 ## 3. Contenu du main
 
