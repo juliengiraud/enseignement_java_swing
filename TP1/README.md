@@ -112,7 +112,7 @@ Normalement votre code doit de nouveau compiler.
 ### 4.3 Ajout du type de machine sur les produits
 
 - Créez un nouvel Enum `TypeMachine` qui contient les valeurs `DISTRIBUTEUR` et `MACHINE_A_CAFE`.
-- Dans `Produit` :
+- Dans `Product` :
   - ajoutez un attribut `caption` de type `String`,
   - ajoutez un attribut `type` de type `TypeMachine`,
   - ajoutez un constructeur qui prend en paramètre le `caption` et le `type`,
