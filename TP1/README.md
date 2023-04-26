@@ -118,7 +118,7 @@ Normalement votre code doit de nouveau compiler.
   - ajoutez un constructeur qui prend en paramètre le `caption` et le `type`,
   - modifiez vos valeurs d'enum de façon à passer les paramètres au constructeur (`M_NMS` devient `M_NMS("M&M's", TypeMachine.DISTRIBUTEUR)`),
   - ajoutez des getters afin de rendre accessibles en lecture le `type` et le `caption`,
-- Dans `getProducts`, utilisez le getter de `caption` à la place de la fonction `name`.
+- Dans toutes les utilisations de `name` sur des objets de type `Product`, utilisez le getter de `caption` à la place.
 - Dans `InterfaceMachine` faite de même pour afficher le nom des produits.
 
 Votre application doit de nouveau compiler et vous devriez voir les captions au lieu des noms des enums de produits.

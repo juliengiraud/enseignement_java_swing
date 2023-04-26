@@ -40,7 +40,7 @@ Le constructeur de cette classe :
 - d'ajouter un eventListener sur le bouton "Non", qui met `false` dans `result` puis ferme la fenêtre
 - d'ajouter un eventListener sur le bouton "Annuler", qui ferme la fenêtre
 
-*Pour fermer la fenêtre vous devez utiliser la méthode `dispose`*
+*Pour fermer la fenêtre vous pouvez utiliser la méthode `dispose`*
 
 Ajoutez ensuite une fonction `getResult` qui retourne le contenu de l'attribut `result`
 
