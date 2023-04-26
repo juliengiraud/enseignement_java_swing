@@ -35,7 +35,7 @@ Les 2 premiers attributs seront passés en paramètre au constructeur du distrib
 
 Un distributeur doit permettre de :
 
-- connaître la liste des produits disponibles via la fonction **`getProducts`** qui retourne l'ensemble des clés de l'attribut `stock` via la fonction `getKeys`
+- connaître la liste des produits disponibles via la fonction **`getProducts`** qui retourne l'ensemble des clés de l'attribut `stock` via la fonction `keySet`
 - connaître le stock de chaque produit via la fonction `getStock` qui prend en paramètre un produit et retourne son stock
 - effectuer un achat via la fonction `order` qui prend en paramètre un produit et
   - s'il est disponible, retire 1 à son stock puis retourne `true`
