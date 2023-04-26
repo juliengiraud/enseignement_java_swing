@@ -48,7 +48,7 @@ Ajoutez ensuite une fonction `getResult` qui retourne le contenu de l'attribut `
 
 ## 2. Ajout de la feature de sélection du sucre
 
-Cette partie se fait dans la classe **MachineACafe** ou **Distributeur** si vous n'avez pas dépassé la partie 3 du TP1.
+Cette partie se fait dans la classe **InterfaceMachineACafe** (ou **InterfaceDistributeur** si vous n'avez pas dépassé la partie 3 du TP1).
 
 Ajoutez trois attributs pour gérer le sucre des cafés :
 
