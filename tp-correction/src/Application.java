@@ -5,27 +5,26 @@ import java.util.List;
 
 public class Application {
 
-    /**
-     * Le but du main est d'afficher l'interface de visualisation d'un distributeur.
-     *
-     * - ajouter une classe `Application` où se trouvera la fonction `main` (`public static void main(String[] arguments)`)
-     * - dans cette fonction, instanciez un distributeur avec quelques articles
-     * - instanciez également une fenêtre `InterfaceDistributeur` qui prendra en paramètre votre distributeur
-     * @param arguments
-     */
-
     public static void main(String arguments[]) {
         setUIFont(new javax.swing.plaf.FontUIResource("Ubuntu", Font.PLAIN,48)); // Pour les écrans avec une grande résolution
+
         Distributeur distributeur = new Distributeur(
-                "Machine 1",
+                "Distributeur 1",
                 Position.DEPT_INFO,
-                List.of(Product.values())
+                Product.getProductsFromType(TypeMachine.DISTRIBUTEUR)
         );
         InterfaceDistributeur interfaceDistributeur = new InterfaceDistributeur(distributeur);
+
+        MachineACafe machineACafe = new MachineACafe(
+                "Machine à café 1",
+                Position.DEPT_INFO,
+                Product.getProductsFromType(TypeMachine.MACHINE_A_CAFE)
+        );
+        InterfaceMachineACafe interfaceMachineACafe = new InterfaceMachineACafe(machineACafe);
     }
 
     // Modifie la police d'écriture de façon globale, pratique pour les grands écrans
-    public static void setUIFont(javax.swing.plaf.FontUIResource f){
+    public static void setUIFont(javax.swing.plaf.FontUIResource f) {
         Enumeration<Object> keys = UIManager.getDefaults().keys();
         while (keys.hasMoreElements()) {
             Object key = keys.nextElement();
