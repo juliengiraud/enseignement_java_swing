@@ -16,23 +16,30 @@ Ajouter un bouton "Recharger les gobelets" sur l'interface de la machine à caf�
 
 ## 2. Passage de la commande
 
-Ajouter une combobox dans l'interface de `Machine` afin de sélectionner l'article de la commande. Faites en sorte qu'un click sur le bouton commander affiche un message dans la console avec le nom du produit (exemple `Commande : Café`).
+Ajouter une combobox dans `InterfaceMachine` afin de sélectionner l'article de la commande. Faites en sorte qu'un click sur le bouton commander affiche un message dans la console avec le nom du produit (exemple `Commande : Café`).
 
 ## 3. Gestion des images de produits
 
-### 3.1 Ajout d'une image par article
+### 3.1 Ajout d'une image par produit
 
-Ajouter une image dans l'enum des articles (l'adresse du fichier depuis la racine du projet)
+Dans l'enum `Produit` :
 
-Afficher cette image dans les interfaces une fois un article sélectionné
+- ajouter un attribut image de type String dans l'enum product
+- ajouter cet attribut au constructeur
+- ajouter les adresses d'images dans les produits
+- ajouter un getter sur l'attribut
+
+Dans `InterfaceMachine`, afficher l'image du produit sélectionné par la combobox.
 
 ### 3.2 Ajout de la possibilité de modifier les images
 
-Ajouter un bouton "changer l'image de l'article"
+Dans la même interface, ajouter un bouton "Modifier l'image".
 
-Utiliser la sélection de fichier pour que ça fonctionne avec JFileChooser
+Vous utiliser la sélection de fichier afin de récupérer l'adresse de la nouvelle image avec un JFileChooser.
 
-## Ajout d'une barre de menu
+Ajoutez un setter dans l'enum `Product` afin de modifier l'image d'un produit puis mettez à jour l'image.
+
+## 4. Ajout d'une barre de menu
 
 - ajouter un menu avec :
   - un onglet "Fenêtre" avec :
