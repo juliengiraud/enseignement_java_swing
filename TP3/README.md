@@ -41,15 +41,20 @@ Ajoutez un setter dans l'enum `Product` afin de modifier l'image d'un produit pu
 
 ## 4. Ajout d'une barre de menu
 
-- ajouter un menu avec :
-  - un onglet "Fenêtre" avec :
-    - un item pour quitter la fenêtre, qui ferme la fenêtre
-  - un onglet "Maintenance" avec :
-    - un item radio "Mode normal" par défaut, tel que le bouton "Recharger les gobelets" disparaisse
-    - un item radio "Mode maintenance" tel que le bouton apparaisse
-    - une barre de menu
-    - un item "Réinitialiser la machine" tq tous les stocks soient de nouveau à 10
+Vous allez ajouter une barre de menu dans la fenêtre principale `InterfaceMachine`, le but est d'ajouter quelques contrôles pour rendre l'interface plus réaliste.
 
-Les items doivent être ajoutés dans le même ordre que listé ci-dessus
+Il faut :
 
-Idéalement d'autres parties des interfaces devraient être cachées en "mode normal", si votre structure de code permet de le faire facilement alors ajoutez les composants liés à la maintenance de la machine
+- un onglet "Fenêtre" avec :
+  - un item pour quitter la fenêtre, qui ferme la fenêtre
+- un onglet "Maintenance" avec :
+  - un item radio "Mode normal" par défaut, tel que les composants "non admin" disparaissent
+  - un item radio "Mode maintenance" tel que les composants "admin" apparaissent
+  - une barre de menu
+  - un item "Réinitialiser la machine" qui remet tous les stocks à 10
+
+Les items doivent être ajoutés dans le même ordre que listé ci-dessus.
+
+Pour la notion de composants "admin" / "non admin" vous pouvez utiliser une liste de composants admin (`List<Component>`) et itérer sur celle-ci afin d'appeler la méthode setVisible pour tous les mettre à jour.
+
+Afin de réinitialiser les stocks, ajoutez une méthode dans `Machine` qui pour chaque produit remet 10 dans la variable de stocks et surchargez-la dans `MachineACafe` afin d'appeler la méthode parente via `super` ET de remettre 10 dans les stocks de gobelets.
