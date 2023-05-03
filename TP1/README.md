@@ -29,7 +29,7 @@ Un distributeur possède :
 
 1. un nom `name` de type `String`
 2. une position `position` de type `Position`
-3. un stock `stock` de type `Map<Product, Integer>` qui permet de connaître le stock de chaque produit, pour l'implémentation vous utiliserez une `HashMap`
+3. un stock `stocks` de type `Map<Product, Integer>` qui permet de connaître le stock de chaque produit, pour l'implémentation vous utiliserez une `HashMap`
 
 Les 2 premiers attributs seront passés en paramètre au constructeur du distributeur, ainsi qu'une liste de produits `products` de type `List<Product>` qui permettra de remplir la variable `stock`. Vous mettrez un stock par défaut à 10 pour chaque produit.
 

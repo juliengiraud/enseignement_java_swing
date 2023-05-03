@@ -1,20 +1,22 @@
-# TP3 - TODO
+# TP3 - Passer commande et recharger la machine
 
 Le but de ce TP est de mettre en pratique les fenêtres de dialogue de Swing, les combobox, la sélection de fichier et les menus.
+
+> Tous les éléments de code nécessaires pour réaliser ce TP sont dans les diapos des cours 1 à 3.
 
 ## 1. Fenêtres de dialogue
 
 ### 1.1 Remplacer la fenêtre du sucre
 
-Remplacer la modale yesNo par une fenêtre de dialogue Swing
+Remplacer la modale yesNo par une fenêtre de dialogue Swing.
 
 ### 1.2 Permettre de recharger les gobelets
 
-Ajouter un bouton "recharger les gobelets" sur la machine à café qui utilise une fenêtre de dialogue afin de saisir le nombre de gobelets à remettre dans la machine
+Ajouter un bouton "Recharger les gobelets" sur l'interface de la machine à café. Ce bouton déclenche l'ouverture d'une fenêtre de dialogue qui permettra de de saisir le nombre de gobelets à remettre dans la machine. Le stock de gobelets affiché sur l'interface doit changer.
 
-## 2. Sélection de l'article à commander
+## 2. Passage de la commande
 
-Ajouter une combobox afin de sélectionner l'article de la commande
+Ajouter une combobox dans l'interface de `Machine` afin de sélectionner l'article de la commande. Faites en sorte qu'un click sur le bouton commander affiche un message dans la console avec le nom du produit (exemple `Commande : Café`).
 
 ## 3. Gestion des images de produits
 
