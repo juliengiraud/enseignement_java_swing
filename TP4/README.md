@@ -51,17 +51,3 @@ Le constructeur se chargera de mettre un titre à la fenêtre, d'appeler `DSIPOS
 `playAgain` appel `beforeInitComponents`, réinitialise `cross` et appel `nextRound`.
 
 `initEventListener` ajoute un listener sur le bouton "Réinitialiser le jeu" et appel `playAgain` en cas de clique, puis pour chaque cellule dont le state est null, ajoute un listener sur le clique qui met `cross` dans `states` à l'indice de la case, puis inverse `cross` et appel `nextRound`
-
-
-
-// Ajoutez une preferedSize à vos fenêtres et vos composants afin d'améliorer le visuel de votre interface
-
-
-Remplacer la combobox de sélection de l'article par une JList
-
-TP suivant
-
-Ajouter un bouton "historique" dans l'interface de maintenance, ce bouton affiche un tableau avec une scrollbar qui affiche l'historique des commandes qu'il faut mémoriser
-"Produit    Heure    Quantité restante"
-Créer une classe qui étend de AbstractTableModel pour stocker ces 3 informations lors de chaque achat, pui l'afficher avec une JTable
-Vous pouvez vous inspirer de cet exemple https://thierry-leriche-dessirier.developpez.com/tutoriels/java/afficher-tableau-avec-tablemodel-5-min/#LVI-A
