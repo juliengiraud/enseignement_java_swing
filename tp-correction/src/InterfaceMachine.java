@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,9 +14,10 @@ public abstract class InterfaceMachine extends JFrame {
     public InterfaceMachine(Machine machine) {
         this.machine = machine;
         this.setTitle(machine.getName());
+        this.setPreferredSize(new Dimension(1000, 1000));
         this.initComponents();
         this.pack();
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setVisible(true);
     }
 
