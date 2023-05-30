@@ -25,3 +25,28 @@ Remplacez la combobox de sélection des produits par une JListe qui fonctionne d
 Dans un second temps, permettez de sélectionner plusieurs articles. Faites en sorte que pour chaque article commandé la barre de chargement soit déclenchée une fois et pendant son chargement, on doit voir l'image du produit en cours de préparation. Pensez aussi à réduire le stock de chaque produit commandé.
 
 Exemple : je sélectionne un café et un cappuccino, je clique sur commander, je vois l'image du café et la barre de chargement charge de 0 à 100, puis je vois l'image du cappuccino pendant que la barre de chargement recommence.
+
+## 2 Historique des commandes
+
+### 2.1 JTable avec des données mockées
+
+En mode maintenance sur l'interface principale (ou sans mode si vous n'en avez pas), rajoutez un bouton "Historique" qui ouvre une nouvelle fenêtre avec une JTable.
+
+Cette JTable utilisera une JScrollPane et affichera des historiques de commandes de la façon suivante :
+
+| Nom machine | Position | Article | Quantité | Admin | Date |
+| ----------- | -------- | ------- | -------- | ----- | ---- |
+| Pissenlit | Dept info | Café | 1  | Non | 2023-05-31 10:57:43 |
+| Pissenlit | Dept info | Cappuccino | 1  | Non | 2023-05-31 10:57:43 |
+| Bob       | Dept geii | Café | 1  | Non | 2023-05-31 10:57:43 |
+| Pissenlit | Dept info | Chocolat chaud | 1  | Non | 2023-05-31 10:57:43 |
+
+Faites en sorte de pouvoir éditer le nom de la machine, changer la position par combobox en affichant toutes les positions existantes, changer l'article par combobox en utilisant les différents articles de la colonne, et modifier la case admin avec une checkbox. La colonne de date ne doit pas être modifiable, et elle doit être deux fois plus large que les autres colonnes.
+
+Insérez les valeurs vous même à l'instantiation de la table et faites fonctionner les features de modification.
+
+### 2.2 Données dynamiques
+
+Une fois que votre table fonctionne, branchez l'historique sur votre machine à café et faites en sorte que la table se mette à jour lorsque vous passez des commandes.
+
+Testez.
