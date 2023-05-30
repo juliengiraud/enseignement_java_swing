@@ -1,7 +1,7 @@
 # TP1 - Création des interfaces de machines à café et distributeurs
 
 ## 0. Initialisation du projet et du dépôt GIT
-
+ 
 - Créer un dépôt GIT sur la [forge](https://forge.univ-lyon1.fr) **sans README** ni autre fichiers
 - Copiez la commande `git remote add origin …`
 - Ajoutez-moi en tant que **developer**

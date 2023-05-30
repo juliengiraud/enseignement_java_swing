@@ -1,7 +1,7 @@
 # TP2 - Sélection du sucre par événements
 
 Le but de ce TP est de mettre en pratique l'ajout d'événements sur des composants et des fenêtres. Nous allons réaliser une modale qui permet de savoir si l'utilisateur souhaite du sucre avec son café.
-
+ 
 ## 1. Création de la fenêtre de sélection
 
 Créez une classe **YesNoModal** qui étend de JFrame.

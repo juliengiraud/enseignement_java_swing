@@ -3,7 +3,7 @@
 Le but de ce TP est de mettre en place une barre de chargement basique qui simulera le temps de préparation du café, puis d'ajouter un jeu Morpion orienté IHM SAÉ.
 
 ## Ajout de la barre de chargement sur les machines à café
-
+ 
 Dans l'interface de machine à café, ajoutez les attributs suivants :
 
 - `loadingBar` de type `JProgressBar`

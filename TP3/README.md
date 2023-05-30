@@ -3,7 +3,7 @@
 Le but de ce TP est de mettre en pratique les fenêtres de dialogue de Swing, les combobox, la sélection de fichier et les menus.
 
 > Tous les éléments de code nécessaires pour réaliser ce TP sont dans les diapos des cours 1 à 3.
-
+ 
 ## 1. Fenêtres de dialogue
 
 ### 1.1 Remplacer la fenêtre du sucre
