@@ -3,7 +3,7 @@ public class Application {
         MonEnum couleur = MonEnum.VERT;
 
         if (couleur == MonEnum.VERT) {
-            System.out.println(couleur);
+            System.out.println(couleur.getCaption());
         }
     }
 }

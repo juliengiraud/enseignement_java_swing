@@ -9,4 +9,8 @@ public enum Couleur {
     private Couleur(String caption) {
         this.caption = caption;
     }
+
+    public String getCaption() {
+        return this.caption;
+    }
 }
