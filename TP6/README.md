@@ -64,7 +64,30 @@ En cas d'échec, affichez un message également.
 
 ### L'initialisation de la base de données
 
-TODO à faire dans la méthode d'initialisation appelée par le constructeur
-+ ajout d'articles
+La méthode initialisation essaie de créer la table product et d'y ajouter vos produits. Si la table existe déjà (si la création plante), elle n'ajoute pas de produits mais indique combien d'éléments se trouvent dans la table. On peut imaginer un booléen `initAnayway` qui permette de supprimer la table si elle existe, à des fins de débug.
 
-+ le loadProductsFromMachineType
+Voici quelques commandes SQL sur lesquels vous baser pour la création et le remplissage de la table, rajoutez tout ce qui sera nécessaire :
+
+```sql
+drop table if exists product;
+create table product (id integer primary key AUTOINCREMENT, caption string, type string);
+insert into product (caption, type) values('Café', 'MACHINE_A_CAFE');
+```
+
+Affichez des messages afin de savoir si la création de la table a fonctionné, idem pour l'insertion des données.
+
+### Exploitation de la base
+
+Le but est d'implémenter toutes les fonctions qui permettrons de faire fonctionner votre application en gérant les produits à partir de la base de données.
+
+Commencez par `loadProductsFromMachineType` puis ajoutez les éventuelles méthodes qu'il vous manque pour que le programme compile.
+
+## Utilisation de ProductDAO
+
+Afin de vous servir de votre DAO, instanciez votre DAO spécifique de la façon suivante et utilisez les méthodes fournies par votre interface :
+
+```java
+ProductDAO productDAO = ProductDAOSQLight.getInstance();
+List<Product> produits = productDAO.loadProductsFromMachineType(TypeMachine.MACHINE_A_CAFE);
+…
+```
