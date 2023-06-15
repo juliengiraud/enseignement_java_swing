@@ -8,7 +8,7 @@ Puis ajoutez ce fichier .jar à vos dépendances.
 
 ### Sur IntelliJ
 
-Dans le menu : File > Project structure, onglet classpath (ouvert par défaut), cliquer sur le petit +.
+Dans le menu : File > Project structure, onglet gauche SDK, onglet en haut Classpath, cliquer sur le petit +.
 
 ### Sur Netbeans
 
@@ -52,7 +52,15 @@ Le but de ce design pattern est de n'avoir qu'une seule instance de la classe et
 
 ### La connexion à la base de données
 
-TODO à faire dans le constructeur
+Maintenant que nous avons un singleton, nous somme sûr qu'il n'y aura qu'une seule connexion à la base de données.
+
+Pour créer cette connexion, ajouter un attribut de classe connection de type Connection.
+
+Dans le constructeur, au sein d'un bloc try catch, initialisez la connexion avec la ligne suivante : `connection = DriverManager.getConnection("jdbc:sqlite:sample.db");`
+
+Une fois la connexion initialisée, affichez un message puis appelez la méthode initialisation, vide pour l'instant.
+
+En cas d'échec, affichez un message également.
 
 ### L'initialisation de la base de données
 
